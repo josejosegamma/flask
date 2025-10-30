@@ -2,7 +2,9 @@ import sqlite3
 from flask import Flask, render_template, request, redirect, url_for, g
 
 app = Flask(__name__)
-DATABASE = "usuarios.db"
+import os
+DATABASE = os.path.join(os.path.dirname(__file__), "usuarios.db")
+
 
 # -----------------------------
 # FUNCIONES DE BASE DE DATOS
